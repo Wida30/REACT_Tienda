@@ -1,0 +1,33 @@
+.galeria{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    figure{
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 275px;
+        height: 400px;
+        text-align: center;
+    
+        h2{
+            text-transform: uppercase;
+    
+           
+        }
+        img{
+            width: 200px;
+            height: 220px;
+            object-fit: cover;
+        }
+
+
+    }
+
+
+}
+
+

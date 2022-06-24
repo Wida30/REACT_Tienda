@@ -1,0 +1,35 @@
+.navegador {
+  height: 10vh;
+
+  &__conjunto {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+
+    &__fila {
+      list-style: none;
+      text-transform: uppercase;
+
+      .logo{
+        width: 140px;
+      }
+
+      a {
+        text-decoration: none;
+        color: black;
+
+        img {
+          width: 40px;
+        }
+
+        &:hover {
+          transform: scale(1.5);
+          color: orangered;
+          transition: all 0.3s;
+        }
+      }
+    }
+  }
+}
