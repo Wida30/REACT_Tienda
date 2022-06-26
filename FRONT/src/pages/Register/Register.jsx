@@ -22,7 +22,7 @@ const Register = () => {
   };
   return (
     <div className="formulario">
-      <h2>REGISTRATE</h2>
+   
       <form onSubmit={handleSubmit(onSubmit)}>
         <label htmlFor="nombre">Nombre</label>
         <input

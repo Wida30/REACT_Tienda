@@ -15,8 +15,8 @@ const Cervezas = () => {
       return <CervezaTostada />;
     } else if (tipoCervezas === "Negra") {
       return <CervezaNegra />;
-    } else {
-      return "todo tipo";
+    // } else {
+    //   return "todo tipo";
     }
   };
 

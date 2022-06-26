@@ -6,7 +6,7 @@
 
   form {
     width: 15%;
-    border: 2px solid black;
+   
     padding: 5%;
     display: flex;
     flex-direction: column;
@@ -14,16 +14,27 @@
     align-items: center;
     margin: 1%;
     label {
-      margin-top: 2%;
+      margin-top: 5%;
       text-transform: capitalize;
+      font-size: 1.3rem;
+      font-weight: bold;
+    }
+
+    input{
+
+      padding: 1%;
+      border-radius: 10px;
     }
 
     button {
       margin: 5%;
 
-      box-shadow: 0px 10px 14px -7px #276873;
-      background: linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
-      background-color: #599bb3;
+   background: linear-gradient(
+        to bottom,
+        #ddd342 5%,
+        rgb(176, 176, 28) 100%
+      );
+      background-color: #ddd342;
       border-radius: 8px;
       display: inline-block;
       cursor: pointer;
@@ -33,12 +44,11 @@
       font-weight: bold;
       padding: 10px 22px;
       text-decoration: none;
-      text-shadow: 0px 1px 0px #3d768a;
-
-      &:hover{
-        background:linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
-	background-color:#408c99;
-      }
+      text-shadow: 0px 1px 0px rgb(192, 192, 33);
+      border: none;
+      &:hover {
+        transform: scale(1.2);
+        transition: all 0.4s;
     }
   }
-}
+}}

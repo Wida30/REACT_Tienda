@@ -30,9 +30,15 @@ const Login = () => {
   };
 
   return (
+
+    
+
+
     <div className="formulario">
-      <h2>Inicia Sesion</h2>
+    
       <form onSubmit={handleSubmit(onSubmit)}>
+
+      <h2>Inicia Sesion</h2>
         <label htmlFor="email">Email:</label>
         <input
           type="email"
