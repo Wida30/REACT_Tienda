@@ -8,7 +8,7 @@
     justify-content: space-evenly;
     align-items: center;
 
-    &__fila {
+    li {
       list-style: none;
       text-transform: uppercase;
 
@@ -19,17 +19,21 @@
       a {
         text-decoration: none;
         color: black;
+        transform: scale(1.5);
 
-        img {
+        img{
           width: 40px;
         }
 
         &:hover {
           transform: scale(1.5);
-          color: orangered;
+          color: yellow;
           transition: all 0.3s;
         }
       }
     }
   }
+}
+.logout{
+  width: 45px;
 }

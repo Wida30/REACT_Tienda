@@ -1,0 +1,26 @@
+figure{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 300px;
+    border: 2px black solid;
+    justify-content: space-around;
+    align-items: center;
+
+    h2{
+        text-align: center;
+        font-size: 1rem;
+        text-transform: capitalize;
+    
+
+    }
+
+    img{
+        width: 90%;
+        height: 70%;
+        object-fit: cover;
+        border-radius: 8px;
+       
+        
+    }
+}

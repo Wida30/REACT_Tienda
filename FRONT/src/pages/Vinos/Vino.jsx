@@ -1,31 +1,39 @@
-import React from "react";
-import { useEffect } from "react";
-import { useState } from "react";
-import axios from "axios";
+import React, { useState } from 'react'
+import VinoBlanco from '../../components/VinosVarios/VinoBlanco'
+import VinoTinto from '../../components/VinosVarios/VinoTinto'
+import VintoRosado from '../../components/VinosVarios/VintoRosado'
+import "./Vinos.scss"
 
 const Vino = () => {
-  const [vinos, setVinos] = useState([]);
-
-  useEffect(() => {
-    const getVinos = async () => {
-      const vinosApi = await axios.get("http://localhost:5000/vinos");
-      setVinos(vinosApi.data.vinos);
-    };
-    getVinos();
-  }, []);
+  const [tipoVinos, setTipoVinos] = useState([]);
+  const seleccionar = () => {
+    if (tipoVinos === "Tinto") {
+      return <VinoTinto/>;
+    } else if (tipoVinos === "Blanco") {
+      return <VinoBlanco/>;
+    } else if (tipoVinos === "Rosado") {
+      return <VintoRosado/>;
+    } else {
+      return "todo tipo";
+    }
+  };
   return (
-    <div>
-      {vinos.length ? (
-        <>
-          {vinos.map((vino) => (
-            <h2 key={vino._id}>{vino.nombre}</h2>
-          ))}
-        </>
-      ) : (
-        <p>loading...</p>
-      )}
+    <div className="gallery">
+    <div className="botones">
+      <button onClick={() => setTipoVinos("Tinto")}>Tinto</button>
+      <button onClick={() => setTipoVinos("Blanco")}>Blanco</button>
+      <button onClick={() => setTipoVinos("Rosado")}>Rosado</button>
     </div>
-  );
-};
 
-export default Vino;
+    <div className="selecionados">{seleccionar()}</div>
+
+    <div className="todas">
+    <VinoTinto/>
+    <VinoBlanco/>
+    <VintoRosado/>
+    </div>
+  </div>
+  )
+}
+
+export default Vino

@@ -14,14 +14,14 @@ const {
   patchVino,
 } = require("../controllers/vino.controller");
 
-router.get("/",[isAuth], getAllVinos);
+router.get("/", getAllVinos);
 router.get("/:id", getVinoByID);
 router.get("/nombre/:nombre", getVinojeBynombre);
 router.get("/tipo/:tipo", getVinoByTipo);
 
-router.post("/", [isAuth], upload.single("foto"), createVino);
+router.post("/", upload.single("foto"), createVino);
 
 router.patch("/:id", patchVino);
-router.delete("/:id", [isAuth], deleteVino);
+router.delete("/:id", deleteVino);
 
 module.exports = router;

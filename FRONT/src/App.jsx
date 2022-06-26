@@ -7,26 +7,33 @@ import Vinos from "../src/pages/Vinos/Vino";
 import Cervezas from "../src/pages/Cervezas/Cervezas";
 import Login from "../src/pages/Login/Login";
 import Register from "../src/pages/Register/Register";
+import { RequireAuth } from "./components/RequireAuth";
+import { JwtContext } from "./context/jwtContext";
+import { useState } from "react";
 
 function App() {
+
+  const [jwt, setJwt] = useState(null);
   return (
     <>
+
+    <JwtContext.Provider value={{jwt, setJwt}}>
       {/* <SWContextProvider> */}
         <Router>
           <div className="App">
             <Navegador />
 
-            <p>hola</p>
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/vinos" element={<Vinos />} />
-              <Route path="/cervezas" element={<Cervezas />} />
+              <Route path="/vinos" element={ <RequireAuth> <Vinos /></RequireAuth>} />
+              <Route path="/cervezas" element={ <RequireAuth> <Cervezas /> </RequireAuth>} />
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />
             </Routes>
           </div>
         </Router>
       {/* </SWContextProvider> */}
+      </JwtContext.Provider>
     </>
   );
 }

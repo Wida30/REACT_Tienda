@@ -11,7 +11,7 @@
 
 //     useEffect (() => {
 //         const getVinos = async () =>{
-//             const vinosApi = await axios.get("https://opentdb.com/api.php?amount=10&category=9&type=boolean");
+//             const vinosApi = await axios.get("http://localhost:5000/vinos");
 //             setVinos(vinosApi.data.vinos);
 //             console.log(setVinos)
 //         };
