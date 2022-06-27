@@ -44,9 +44,9 @@ const Navegador = () => {
 
         <>
 
-        <li className="navegador__conjunto__fila">
+        {/* <li className="navegador__conjunto__fila">
           <Link to="/register">registrarse</Link>
-        </li>
+        </li> */}
         <li className="navegador__conjunto__fila">
           <Link to="/login">
             

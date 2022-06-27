@@ -25,7 +25,7 @@ const Login = () => {
   
 
       setJwt(localStorage.getItem("token"));
-      navigate("/");
+      navigate("/vinos");
     });
   };
 

@@ -1,8 +1,11 @@
 import React from 'react';
 import "./Home.scss";
+import Register from '../Register/Register';
 
 const Home = () => {
   return (
+    <>
+    <div className='principal'>
     <div className='homegallery'>
 
     <h2>La palabra brindis tiene su raíz en el alemán 'bring dir's', que significa "yo te lo ofrezco"</h2>
@@ -15,6 +18,14 @@ const Home = () => {
 
 
     </div>
+
+    <div className='registro'>
+
+    <Register></Register>
+
+    </div>
+    </div>
+    </>
   )
 }
 
