@@ -11,7 +11,7 @@
 
 //     useEffect (() => {
 //         const getVinos = async () =>{
-//             const vinosApi = await axios.get("http://localhost:5000");
+//             const vinosApi = await axios.get("http://localhost:5000/vinos");
 //             setVinos(vinosApi.data.vinos);
 //             console.log(setVinos)
 //         };

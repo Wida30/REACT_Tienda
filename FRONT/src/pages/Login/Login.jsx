@@ -22,7 +22,7 @@ const Login = () => {
       localStorage.setItem("token", response.data.data.token);
       //aqui almacenamos el nombre
       // localStorage.setItem("nombre", response.data.data.user.nombre);
-      // localStorage.setItem("edad", response.data.data.user.edad);
+  
 
       setJwt(localStorage.getItem("token"));
       navigate("/");

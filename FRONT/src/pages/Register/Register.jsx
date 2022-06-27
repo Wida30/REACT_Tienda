@@ -11,6 +11,9 @@ const Register = () => {
     console.log(formData);
 
     if (formData.edad > 17) {
+
+      //en api se puede .create .post.get...
+
       API.post("users/register", formData).then((response) => {
         navigate("/login");
       });
@@ -18,7 +21,7 @@ const Register = () => {
       alert("No puedes registarte por ser menor de edad");
     }
 
-    //en api se puede .create .post.get...
+    
   };
   return (
     <div className="formulario">
