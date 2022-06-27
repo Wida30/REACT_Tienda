@@ -3,13 +3,16 @@ import Navegador from "../src/core/Navegador";
 // import { SWContextProvider } from "./context/context";
 import { Routes, Route, BrowserRouter as Router } from "react-router-dom";
 import Home from "../src/pages/Home/Home";
-import Vinos from "../src/pages/Vinos/Vino";
-import Cervezas from "../src/pages/Cervezas/Cervezas";
+
 import Login from "../src/pages/Login/Login";
 import Register from "../src/pages/Register/Register";
 import { RequireAuth } from "./components/RequireAuth";
 import { JwtContext } from "./context/jwtContext";
 import { useState } from "react";
+
+import Cervezas from "./pages/Cervezas/Cervezas";
+import Vino from "./pages/Vinos/Vino";
+
 
 function App() {
 
@@ -25,7 +28,7 @@ function App() {
 
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/vinos" element={ <RequireAuth> <Vinos /></RequireAuth>} />
+              <Route path="/vinos" element={ <RequireAuth> <Vino /></RequireAuth>} />
               <Route path="/cervezas" element={ <RequireAuth> <Cervezas /> </RequireAuth>} />
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />
