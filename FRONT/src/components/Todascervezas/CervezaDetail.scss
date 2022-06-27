@@ -1,0 +1,31 @@
+.detalle{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 90%;
+    margin-top: 50px;
+
+    .primario{
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-transform: uppercase;
+        img{
+            width: 70%;
+            height: 80%;
+        }
+    }
+
+    .secundario{
+        width: 400px;
+        p{
+            text-transform: capitalize;
+        }
+    }
+
+}

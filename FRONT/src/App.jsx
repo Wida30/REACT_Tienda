@@ -12,6 +12,8 @@ import { useState } from "react";
 
 import Cervezas from "./pages/Cervezas/Cervezas";
 import Vino from "./pages/Vinos/Vino";
+import CervezaDetail from "./components/Todascervezas/CervezaDetail";
+import VinoDetail from "./components/Todosvinos/VinoDetail";
 
 
 function App() {
@@ -29,7 +31,9 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/vinos" element={ <RequireAuth> <Vino /></RequireAuth>} />
+              <Route path="/vinos/:id" element={ <RequireAuth> <VinoDetail /></RequireAuth>} />
               <Route path="/cervezas" element={ <RequireAuth> <Cervezas /> </RequireAuth>} />
+              <Route path="/cervezas/:id" element={ <RequireAuth> <CervezaDetail /> </RequireAuth>} />
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />
             </Routes>
