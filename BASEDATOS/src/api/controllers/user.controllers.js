@@ -19,7 +19,9 @@ const register = async (req, res, next) => {
 
 const login = async (req, res, next) => {
   try {
-    const userInfo = await User.findOne({ email: req.body.email });
+    //recogemoslos datos del campo nombre del login
+    const userInfo = await User.findOne({ nombre: req.body.nombre });
+    //comparamos si existe la contraseña 
     if (bcrypt.compareSync(req.body.password, userInfo.password)) {
       userInfo.password = null;
       // hacemos el token con el id + email del usuario
