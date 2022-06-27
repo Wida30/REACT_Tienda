@@ -6,7 +6,7 @@
 
   form {
     width: 15%;
-   
+
     padding: 5%;
     display: flex;
     flex-direction: column;
@@ -20,16 +20,15 @@
       font-weight: bold;
     }
 
-    input{
-
-      padding: 1%;
+    input {
+      padding: 3%;
       border-radius: 10px;
     }
 
     button {
-      margin: 5%;
+      margin-top: 30%;
 
-   background: linear-gradient(
+      background: linear-gradient(
         to bottom,
         #ddd342 5%,
         rgb(176, 176, 28) 100%
@@ -49,6 +48,7 @@
       &:hover {
         transform: scale(1.2);
         transition: all 0.4s;
+      }
     }
   }
-}}
+}

@@ -22,13 +22,13 @@ const Todocervezas = () => {
   return (
     <>
       <div className="botones">
-        <button onClick={() => setClasificacion("rubia")}>rubia</button>
-        <button onClick={() => setClasificacion("tostada")}>tostada</button>
-        <button onClick={() => setClasificacion("negra")}>negra</button>
-        <button onClick={() => setClasificacion("")}>Todos</button>
+        <button onClick={() => setClasificacion("rubia")} className = "selecionador">rubia</button>
+        <button onClick={() => setClasificacion("tostada")}className = "selecionador">tostada</button>
+        <button onClick={() => setClasificacion("negra")}className = "selecionador">negra</button>
+        <button onClick={() => setClasificacion("")}className = "selecionador">Todos</button>
       </div>
 
-      
+      <div className="mostrando">
 
       {filterCervezas.length ? (
         <>
@@ -42,6 +42,7 @@ const Todocervezas = () => {
       ) : (
         <p>Loadin...</p>
       )}
+      </div>
     </>
   );
 };
