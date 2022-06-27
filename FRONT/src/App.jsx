@@ -14,6 +14,7 @@ import Cervezas from "./pages/Cervezas/Cervezas";
 import Vino from "./pages/Vinos/Vino";
 import CervezaDetail from "./components/Todascervezas/CervezaDetail";
 import VinoDetail from "./components/Todosvinos/VinoDetail";
+import DetallesVinoPage from "./pages/Vinos/DetallesVinoPage";
 
 
 function App() {
@@ -31,7 +32,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/vinos" element={ <RequireAuth> <Vino /></RequireAuth>} />
-              <Route path="/vinos/:id" element={ <RequireAuth> <VinoDetail /></RequireAuth>} />
+              <Route path="/vinos/:id" element={ <RequireAuth> <DetallesVinoPage /></RequireAuth>} />
               <Route path="/cervezas" element={ <RequireAuth> <Cervezas /> </RequireAuth>} />
               <Route path="/cervezas/:id" element={ <RequireAuth> <CervezaDetail /> </RequireAuth>} />
               <Route path="/login" element={<Login />} />

@@ -39,6 +39,7 @@ const Todocervezas = () => {
             <figure >
               <h2>{cerveza.nombre}</h2>
               <img src={cerveza.foto} alt={cerveza.nombre} />
+              <p className="enlacedetalle">Mas detalles</p>
             </figure>
             </Link>
           ))}

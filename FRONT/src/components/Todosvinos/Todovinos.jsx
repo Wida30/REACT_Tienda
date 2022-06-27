@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 
 
@@ -34,10 +35,13 @@ const Todovinos = () => {
       {filterVinos.length ? (
         <>
           {filterVinos.map((vino) => (
-            <figure key={vino._id} className="carta">
+
+            <Link key={vino._id} to={`${vino._id}`}>
+            <figure  className="carta">
               <h2>{vino.nombre}</h2>
               <img src={vino.foto} alt={vino.nombre} />
             </figure>
+            </Link>
           ))}
         </>
       ) : (
