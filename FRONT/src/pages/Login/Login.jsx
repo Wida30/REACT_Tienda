@@ -39,21 +39,24 @@ const Login = () => {
       <form onSubmit={handleSubmit(onSubmit)}>
 
       <h2>Inicia Sesion</h2>
-        <label htmlFor="email">Email:</label>
+
+
+        {/* <label htmlFor="email">Email:</label>
         <input
           type="email"
           id="email"
           {...register("email", { required: true })}
-        />
+        /> */}
 
-
-        {/* <label htmlFor="nombre">Nombre</label>
+        {/* enlazar con el controlador del usuario */}
+        <label htmlFor="nombre">Nombre</label>
         <input
           type="text"
           id="nombre"
           {...register("nombre", { required: true })}
-        /> */}
+        />
 
+        {/* en el controlador del usuario tenemos el password para comprobar si existe */}
         <label htmlFor="password">Password</label>
         <input
           type="password"
