@@ -33,7 +33,8 @@ const getCervezaByID = async (req, res, next) => {
   const getCervezajeBynombre = async (req, res, next) => {
     try {
       const {nombre} = req.params;
-      const cervezaBynombre = await Vino.findOne({nombre: nombre});
+  
+      const cervezaBynombre = await Cerveza.findOne({nombre : nombre});
       return res.json({
         status: 200,
         message: HTTPSTATUSCODE[200],

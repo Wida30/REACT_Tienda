@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./Todocerveza.scss";
+import { Link } from "react-router-dom"; 
 
 const Todocervezas = () => {
   const [cervezas, setCervezas] = useState([]);
@@ -33,10 +34,13 @@ const Todocervezas = () => {
       {filterCervezas.length ? (
         <>
           {filterCervezas.map((cerveza) => (
-            <figure key={cerveza._id}>
+
+            <Link key={cerveza._id} to={`${cerveza._id}`}>
+            <figure >
               <h2>{cerveza.nombre}</h2>
               <img src={cerveza.foto} alt={cerveza.nombre} />
             </figure>
+            </Link>
           ))}
         </>
       ) : (
