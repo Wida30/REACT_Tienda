@@ -7,7 +7,7 @@ button {
   border-radius: 8px;
   display: inline-block;
   cursor: pointer;
-  color: #ffffff;
+  color: black;
   font-family: Arial;
   font-size: 1rem;
   font-weight: bold;
@@ -58,5 +58,7 @@ button {
       object-fit: cover;
       border-radius: 8px;
     }
+   
+    
   }
 }
