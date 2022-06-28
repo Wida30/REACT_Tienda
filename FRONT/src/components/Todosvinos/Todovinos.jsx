@@ -9,7 +9,7 @@ const Todovinos = () => {
 
   useEffect(() => {
     const getVinos = async () => {
-      const vinosApi = await axios.get("http://localhost:5000/vinos");
+      const vinosApi = await axios.get("https://db-tienda-react.vercel.app/vinos");
       setVinos(vinosApi.data.vinos);
     };
     getVinos();

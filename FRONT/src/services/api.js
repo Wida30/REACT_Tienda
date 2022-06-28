@@ -12,7 +12,7 @@ export const APIHeaders = {
 };
 
 export const API = axios.create({
-  baseURL: "http://localhost:5000",
+  baseURL: "https://db-tienda-react.vercel.app",
   headers: APIHeaders,
 });
 

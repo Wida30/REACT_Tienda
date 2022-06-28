@@ -8,7 +8,7 @@ const Todocervezas = () => {
 
   useEffect(() => {
     const getCervezas = async () => {
-      const cervezasApi = await axios.get("http://localhost:5000/cervezas");
+      const cervezasApi = await axios.get("https://db-tienda-react.vercel.app/cervezas");
       setCervezas(cervezasApi.data.cervezas);
     };
     getCervezas();
