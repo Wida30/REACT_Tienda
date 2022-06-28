@@ -29,6 +29,7 @@ const Navegador = () => {
         <li className="navegador__conjunto__fila">
           <Link to="/cervezas"> cervezas</Link>
         </li>
+       
         <li>
           <ButtonLogout />
         </li>

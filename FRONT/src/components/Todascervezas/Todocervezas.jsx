@@ -20,6 +20,13 @@ const Todocervezas = () => {
     cerveza.tipo.includes(clasificacion)
   );
 
+  // const inputChange= (e) => {
+  //   e.preventDefault();
+  //   console.log(e.target.value)
+  //   setClasificacion(e.target.value);
+
+  // };
+
   return (
     <>
       <div className="botones">
@@ -27,7 +34,13 @@ const Todocervezas = () => {
         <button onClick={() => setClasificacion("tostada")}className = "selecionador">tostada</button>
         <button onClick={() => setClasificacion("negra")}className = "selecionador">negra</button>
         <button onClick={() => setClasificacion("")}className = "selecionador">Todos</button>
+        <button> <Link to="/cerveform"> inserta cerveza </Link> </button>
       </div>
+
+      {/* <div>
+        <label htmlFor="buscador" > buscador</label>
+        <input type="text" id="buscador" onChange={inputChange}/>
+      </div> */}
 
       <div className="mostrando">
 

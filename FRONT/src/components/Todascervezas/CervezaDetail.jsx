@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import axios from "axios";
 import "./CervezaDetail.scss";
+import Borrarcerveza from "./Borrarcerveza";
 
 const CervezaDetail = () => {
   const { id } = useParams();
@@ -43,6 +44,8 @@ const CervezaDetail = () => {
             <p>
               <strong>precio:</strong> {cerveza.precio} euros
             </p>
+
+            <Borrarcerveza cervezaID={cerveza._id}/>
 
             <button> <Link to="/cervezas" > back </Link> </button>
 
