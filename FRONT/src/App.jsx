@@ -13,8 +13,10 @@ import { useState } from "react";
 import Cervezas from "./pages/Cervezas/Cervezas";
 import Vino from "./pages/Vinos/Vino";
 import CervezaDetail from "./components/Todascervezas/CervezaDetail";
-import VinoDetail from "./components/Todosvinos/VinoDetail";
+
 import DetallesVinoPage from "./pages/Vinos/DetallesVinoPage";
+import InsertaCerveza from "./components/Todascervezas/InsertaCerveza";
+import InsertaVino from "./components/Todosvinos/InsertaVino";
 
 
 function App() {
@@ -33,8 +35,10 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/vinos" element={ <RequireAuth> <Vino /></RequireAuth>} />
               <Route path="/vinos/:id" element={ <RequireAuth> <DetallesVinoPage /></RequireAuth>} />
+              <Route path="/vinoform" element={ <RequireAuth> <InsertaVino /> </RequireAuth>} />
               <Route path="/cervezas" element={ <RequireAuth> <Cervezas /> </RequireAuth>} />
               <Route path="/cervezas/:id" element={ <RequireAuth> <CervezaDetail /> </RequireAuth>} />
+              <Route path="/cerveform" element={ <RequireAuth> <InsertaCerveza /> </RequireAuth>} />
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />
             </Routes>

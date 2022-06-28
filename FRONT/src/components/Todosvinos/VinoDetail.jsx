@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import {Link, useParams } from "react-router-dom";
 import axios from "axios";
+import Borravino from "./Borravino";
 
 const VinoDetail = () => {
   const { id } = useParams();
@@ -29,6 +30,8 @@ const VinoDetail = () => {
             <p> <strong>descripcion:</strong>  {vino.descripcion}</p>
             <p> <strong>añada:</strong> {vino.añada}</p>
             <p> <strong>precio:</strong> {vino.precio} euros</p>
+            {/* le pasamos al componente Borrarvino el _id */}
+            <Borravino vinoID={vino._id}/>
             <button> <Link to="/vinos" > back </Link> </button>
           </div>
         </>

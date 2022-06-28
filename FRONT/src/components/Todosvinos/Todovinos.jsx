@@ -28,6 +28,7 @@ const Todovinos = () => {
         <button onClick={() => setClasificacion("blanco")}className = "selecionador">blanco</button>
         <button onClick={() => setClasificacion("rosado")}className = "selecionador">rosado</button>
         <button onClick={() => setClasificacion("")} className = "selecionador">Todos</button>
+        <button> <Link to="/vinoform"> inserta vino </Link> </button>
       </div>
 
       <div className="mostrando">
