@@ -1,13 +1,12 @@
-import React from 'react'
-import CervezaDetail from '../../components/Todascervezas/CervezaDetail'
+import React from "react";
+import CervezaDetail from "../../components/Todascervezas/CervezaDetail";
 
 const DetallesPage = () => {
   return (
     <div className="mostarGaleria">
-
-      <CervezaDetail/>
+      <CervezaDetail />
     </div>
-  )
-}
+  );
+};
 
-export default DetallesPage
+export default DetallesPage;

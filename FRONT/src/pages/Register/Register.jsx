@@ -2,7 +2,7 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { API } from "../../services/api";
 import { useNavigate } from "react-router-dom";
-import Swal from 'sweetalert2'
+import Swal from "sweetalert2";
 
 const Register = () => {
   const { register, handleSubmit } = useForm();
@@ -12,7 +12,6 @@ const Register = () => {
     console.log(formData);
 
     if (formData.edad > 17) {
-
       //en api se puede .create .post.get...
 
       API.post("users/register", formData).then((response) => {
@@ -21,20 +20,17 @@ const Register = () => {
     } else {
       // alert("No puedes registarte por ser menor de edad");
       Swal.fire({
-        title: 'Lo sentimos!',
-        text: 'eres menos de edad',
-        icon: 'warning',
-        confirmButtonText: 'OK'
-      })
+        title: "Lo sentimos!",
+        text: "eres menos de edad",
+        icon: "warning",
+        confirmButtonText: "OK",
+      });
     }
-
-    
   };
   return (
     <div className="formulario">
+      <h2>Registrate para brindar con nosotros</h2>
 
-    <h2>Registrate para brindar con nosotros</h2>
-   
       <form onSubmit={handleSubmit(onSubmit)}>
         <label htmlFor="nombre">Nombre</label>
         <input

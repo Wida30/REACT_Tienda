@@ -1,22 +1,12 @@
 import React from "react";
 
-
-
 import Todocervezas from "../../components/Todascervezas/Todocervezas";
-import "./Cervezas.scss"
+import "./Cervezas.scss";
 
 const Cervezas = () => {
   return (
     <div className="mostarGaleria">
-
-
-
-      <Todocervezas/>
-
-      
-
-     
-
+      <Todocervezas />
     </div>
   );
 };

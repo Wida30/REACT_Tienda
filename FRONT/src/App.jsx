@@ -17,6 +17,7 @@ import CervezaDetail from "./components/Todascervezas/CervezaDetail";
 import DetallesVinoPage from "./pages/Vinos/DetallesVinoPage";
 import InsertaCerveza from "./components/Todascervezas/InsertaCerveza";
 import InsertaVino from "./components/Todosvinos/InsertaVino";
+// import Sorteo from "./pages/Sorteo/Sorteo";
 
 
 function App() {
@@ -39,6 +40,7 @@ function App() {
               <Route path="/cervezas" element={ <RequireAuth> <Cervezas /> </RequireAuth>} />
               <Route path="/cervezas/:id" element={ <RequireAuth> <CervezaDetail /> </RequireAuth>} />
               <Route path="/cerveform" element={ <RequireAuth> <InsertaCerveza /> </RequireAuth>} />
+              {/* <Route path="/sorteo" element={ <RequireAuth> <Sorteo /> </RequireAuth>} /> */}
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />
             </Routes>

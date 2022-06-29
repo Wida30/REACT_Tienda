@@ -3,11 +3,8 @@ import Swal from "sweetalert2";
 import { API } from "../../services/api";
 import { useNavigate } from "react-router-dom";
 
-
-
-const Borravino = ({vinoID}) => {
-
-    // 1- hemos recogido el -id en vinoID
+const Borravino = ({ vinoID }) => {
+  // 1- hemos recogido el -id en vinoID, desde vinoDetail
 
   const navigate = useNavigate();
 
@@ -25,12 +22,13 @@ const Borravino = ({vinoID}) => {
     });
   };
 
-// 2-  al llamar a la function de borrar le estamos pasando el _id como ha sido recogido al principio (vinoID)
+  // 2-  al llamar a la function de borrar le estamos pasando el _id como ha sido recogido al principio (vinoID)
 
-
-  return <button onClick={() => deleteVino(vinoID)} className = "selecionador">borrar</button>
-
-
+  return (
+    <button onClick={() => deleteVino(vinoID)} className="selecionador">
+      borrar
+    </button>
+  );
 };
 
 export default Borravino;
