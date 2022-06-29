@@ -32,6 +32,8 @@ const Register = () => {
   };
   return (
     <div className="formulario">
+
+    <h2>Registrate para brindar con nosotros</h2>
    
       <form onSubmit={handleSubmit(onSubmit)}>
         <label htmlFor="nombre">Nombre</label>
