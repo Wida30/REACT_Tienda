@@ -1,0 +1,22 @@
+.sorteo {
+    width: 300px;
+    height: 500px;
+    object-fit: cover;
+    animation-name: example;
+    animation-duration: 4s;
+    display: flex;
+    align-items: center;
+   margin: auto;
+
+   img{
+    width: 200px;
+    object-fit: cover;
+   }
+  }
+  
+  @keyframes example {
+    0%   {background-image: url(./vinos/CotoImaz.jpg);}
+    25%   {background-image: url(./vinos/Noelia.jpg);}
+    50%   {background-image: url(./vinos/Pago.jpg);}
+    100%  {background-image: url(./vinos/Teran.jpg);}
+  }
